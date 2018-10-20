@@ -1,0 +1,29 @@
+<div class="item">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <h4>
+                  Enter a question
+                </h4>
+                <textarea class="form-control" [formControl]="question"></textarea>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <h4>
+                  Enter an answer
+                </h4>
+                <textarea class="form-control" [formControl]="answer"></textarea>
+              </div>
+            </div>
+          </div>
+          <button [disabled]="!myForm.valid" type="submit" class="btn btn-success">Add item</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

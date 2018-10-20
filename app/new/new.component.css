@@ -1,0 +1,29 @@
+.new-wrap {
+  background: -webkit-linear-gradient(130deg, rgb(0, 188, 212), #4766c8, rgb(100, 48, 148));
+  background: -moz-linear-gradient(130deg, rgb(0, 188, 212), #4766c8, rgb(100, 48, 148));
+  background: -ms-linear-gradient(130deg, rgb(0, 188, 212), #4766c8, rgb(100, 48, 148));
+  background: -o-linear-gradient(130deg, rgb(0, 188, 212), #4766c8, rgb(100, 48, 148));
+  background: linear-gradient(130deg, rgb(0, 188, 212), #4766c8, rgb(100, 48, 148));
+  padding-top: 2em;
+  padding-bottom: 2em;
+  color: #fff;
+  position: relative;
+  top: -24px;
+}
+.erase {
+  display: none;
+}
+.spec-visibility{
+  display:none;
+}
+@media screen and (max-width: 767px) {
+  .new-wrap {
+    background: #e9e4e1;
+    color: black;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .spec-visibility {
+    display: block;
+  }
+}

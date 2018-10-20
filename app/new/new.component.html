@@ -1,0 +1,19 @@
+<div class="new-wrap">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit()" [ngClass]="{erase: categoryFlag}">
+          <div class="form-group">
+            <h3>Create new category</h3>
+            <input type="text"
+                   class="form-control"
+                   placeholder="Enter category name"
+                   [formControl]="categoryName">
+          </div>
+          <button type="submit" class="btn btn-success" [disabled]="!myForm.valid">Create</button>
+        </form>
+        <hr class="spec-visibility" />
+      </div>
+    </div>
+  </div>
+</div>

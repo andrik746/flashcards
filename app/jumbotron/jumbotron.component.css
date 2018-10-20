@@ -1,0 +1,40 @@
+.custom-jumbotron {
+  background-image: url('../../assets/img/main.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center -3.47344px;
+  height: 497px;
+  color: #303840;
+  padding: 120px 0;
+  position: relative;
+  top: -24px;
+}
+.custom-jumbotron h1{
+  font-size: 70px;
+}
+
+@media screen and (max-width: 1199px){
+  .custom-jumbotron {
+    background-position: center 0px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .custom-jumbotron {
+    padding: 70px 0;
+    height: 405px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .custom-jumbotron {
+    background-size: contain;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .custom-jumbotron {
+    display: none;
+  }
+}

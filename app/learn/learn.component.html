@@ -1,0 +1,47 @@
+<div class="learn-section">
+  <div class="learn-wrap">
+    <div class="learn-back"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="item-top-wrap">
+            <h3>{{ currentCat.name }}</h3>
+            <div class="top-buttons" *ngIf="currentCatItems.length && currentCatItems.length > 4">
+              <button type="button"
+                      class="btn btn-light"
+                      [ngClass]="{erase: orderButtonVisibility}"
+                      (click)="onOrder()">
+                Order
+              </button>
+              <button type="button"
+                      class="btn btn-light"
+                      (click)="onShuffle()">Shuffle</button>
+            </div>
+          </div>
+          <div *ngIf="!currentCatItems.length || currentCatItems.length < 1" class="add-items-btn">
+            <a class="btn btn-primary" [routerLink]="['/edit', id]">Add some items first</a>
+          </div>
+          <div *ngIf="currentCatItems.length && currentCatItems.length > 0">
+            <h5 class="index">{{ index + 1 }}/{{ currentCatItems.length }}</h5>
+            <div class="flashcards-slider-item">
+              <div class="flashcards-slider-question" [ngClass]="{erase: questionVisibility}">
+                <div class="" (click)="toggleQ()">
+                  <pre>{{ currentCatItem.question }}</pre>
+                </div>
+              </div>
+              <div class="flashcards-slider-answer" [ngClass]="{erase: answerVisibility}">
+                <div class="" (click)="toggleA()">
+                  <pre>{{ currentCatItem.answer }}</pre>
+                </div>
+              </div>
+            </div>
+            <div class="flashcards-slider-nav" *ngIf="currentCatItems.length && currentCatItems.length > 1">
+              <button type="button" class="btn btn-primary" (click)="prev()">prev</button>
+              <button type="button" class="btn btn-primary" (click)="next()">next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

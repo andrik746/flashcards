@@ -1,0 +1,23 @@
+<div class="category-list-wrap">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h3 *ngIf="managerService.cats.length">Available categories</h3>
+        <h3 *ngIf="!managerService.cats.length">Add you first category!</h3>
+        <div [style.display]="loadingDisplay">Loading...</div>
+        <ul class="list-group">
+          <div *ngFor="let item of managerService.cats; let i = index">
+            <li class="list-group-item animation-element slide-left">
+              <h4>{{ item.name }}</h4>
+              <hr />
+              <a class="btn btn-primary" [routerLink]="['/learn', item.id]">Learn</a>
+              <a class="btn btn-primary" [routerLink]="['/edit', item.id]">Edit</a>
+              <button type="button" class="btn btn-secondary" (click)="onRemove(i)">Remove</button>
+            </li>
+            <hr />
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

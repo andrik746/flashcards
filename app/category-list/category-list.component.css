@@ -1,0 +1,25 @@
+a {
+  display: inline-block;
+  margin-right: 5px;
+}
+button {
+  float: right;
+}
+.category-list-wrap {
+  min-height: 512px;
+  background-image: url('../../assets/img/bottom.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media screen and (max-width: 767px) {
+  .category-list-wrap {
+    position: relative;
+    top: -40px;
+    margin-bottom: -40px;
+  }
+}

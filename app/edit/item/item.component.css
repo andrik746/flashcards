@@ -1,0 +1,11 @@
+.item {
+  padding-bottom: 2em;
+  color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .item {
+    color: black;
+    padding-bottom:2em;
+  }
+}

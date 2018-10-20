@@ -1,0 +1,40 @@
+.call-modal-wrap{
+  position:relative;
+  top:-6px;
+}
+.modal {
+  color: #212529;
+}
+.call-modal, .call-modal:hover, .call-modal:active {
+  padding: 0;
+  border: none;
+  background: transparent;
+  background-color: transparent;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+}
+.call-modal:hover {
+  color: #F4EBE8;
+}
+
+.call-modal:active {
+  color: #6A3E37;
+}
+@media screen and (max-width: 767px) {
+  .call-modal-wrap {
+    position: relative;
+    margin-top: 6px;
+    margin-bottom: 13px;
+    top:0;
+  }
+  .call-modal{
+    color:#000;
+  }
+  .call-modal:hover {
+    color: #444;
+  }
+  .call-modal:active {
+    color: #717171;
+  }
+}

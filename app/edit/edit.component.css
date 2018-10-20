@@ -1,0 +1,51 @@
+.moving-container {
+  position: relative;
+  top: -24px;
+  background: -webkit-linear-gradient(130deg, rgb(0, 188, 212), #4766c8, rgb(100, 48, 148));
+  background: -moz-linear-gradient(130deg, rgb(0, 188, 212), #4766c8, rgb(100, 48, 148));
+  background: -ms-linear-gradient(130deg, rgb(0, 188, 212), #4766c8, rgb(100, 48, 148));
+  background: -o-linear-gradient(130deg, rgb(0, 188, 212), #4766c8, rgb(100, 48, 148));
+  background: linear-gradient(130deg, rgb(0, 188, 212), #4766c8, rgb(100, 48, 148));
+}
+.top-wrapper-wrap {
+  padding-top: 2em;
+  color: #fff;
+}
+.top-wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+button {
+  height: 38px;
+}
+h2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media screen and (max-width: 767px) {
+  .top-wrapper-wrap {
+    color: black;
+    padding-top: 1em;
+  }
+  .moving-container {
+    background: #e9e4e1;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  h2 {
+    font-size: 1.75rem;
+  }
+  .top-wrapper {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}

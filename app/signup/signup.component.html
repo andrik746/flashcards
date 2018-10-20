@@ -1,0 +1,51 @@
+<div class="signup-wrap">
+  <div class="container">
+    <div class="justify-content-center row">
+      <div class="col-sm-12 col-md-7 col-lg-6 col-xl-5">
+        <h4 *ngIf="authService.loginState">
+          You are logged in as {{ authService.userName }}
+        </h4>
+        <div class="visibility-wrapper" *ngIf="!authService.loginState">
+          <h4>
+            You have to sign up or <a [routerLink]="['/login']">log in</a>
+          </h4>
+          <h6>Don't have an account? Please, sign up:</h6>
+          <form [formGroup]="myForm" (ngSubmit)="onSubmit()" [ngClass]="{erase: categoryFlag}">
+            <div class="form-group">
+              <label>Login</label>
+              <input type="text"
+                     class="form-control"
+                     placeholder="Enter your login"
+                     [formControl]="login">
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password"
+                     class="form-control"
+                     placeholder="Enter your password"
+                     [formControl]="password">
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="text"
+                     class="form-control"
+                     placeholder="Enter your email"
+                     [formControl]="email">
+              <!--<small class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+            </div>
+            <button type="submit" class="btn btn-success" [disabled]="!myForm.valid">Submit</button>
+          </form>
+          <hr class="spec-visibility" />
+          <div class="errors-area">
+            <p class="form-text text-danger" [ngClass]="{erase: existMessageState}">This username is already taken, try again</p>
+            <p class="form-text text-danger" [ngClass]="{erase: messageState}">Something went wrong, try again</p>
+            <p *ngIf="(login.touched&&login.hasError('minlength')) || (password.touched&&password.hasError('minlength'))" class="form-text text-danger">Login and password should have at least 6 characters!</p>
+            <p *ngIf="email.touched&&email.hasError('pattern')" class="form-text text-danger">Email should have a correct format!</p>
+            <p *ngIf="myForm.touched && ( password.hasError('required') || login.hasError('required') || email.hasError('required') )" class="form-text text-danger">All fields are required!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

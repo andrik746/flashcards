@@ -1,0 +1,37 @@
+a:hover{
+  text-decoration:none;
+}
+.login-wrap {
+  position: relative;
+  top: -24px;
+  padding-top: 24px;
+  margin-bottom: -24px;
+  min-height: 512px;
+  background-image: url('../../assets/img/bottom.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+.errors-area {
+  background: #fff;
+  border-radius: .25rem;
+  margin-bottom: 30px;
+}
+
+.errors-area p {
+  height: calc(2.25rem + 2px);
+  line-height: 1.5;
+  padding: .375rem .75rem;
+  margin-bottom: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.errors-area p:not([style*="display: none"]):last-child {
+  border-radius: .25rem;
+}
+
+@media screen and (min-width: 2000px) {
+  .login-wrap {
+    min-height: 700px;
+  }
+}

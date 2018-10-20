@@ -1,0 +1,19 @@
+<app-jumbotron></app-jumbotron>
+<div class="moving-container">
+  <div class="top-wrapper-wrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="top-wrapper">
+            <h2>{{ currentCat.name }}</h2>
+            <button *ngIf="currentCategoryItems.length" type="button" class="btn btn-light" (click)="onLearn()">Learn this category</button>
+          </div>
+          <app-edit-name></app-edit-name>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-item></app-item>
+</div>
+<app-added-items></app-added-items>
+<app-footer></app-footer>
