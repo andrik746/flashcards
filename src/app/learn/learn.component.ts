@@ -110,8 +110,7 @@ export class LearnComponent implements OnInit {
   }
 
   toggleToDefault() {
-    this.questionVisibility = false;
-    this.answerVisibility = true;
+    this.toggleA();
   }
 
 }

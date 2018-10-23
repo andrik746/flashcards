@@ -9,7 +9,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class CategoryListComponent implements OnInit {
   loadingDisplay: string = 'none';
-  constructor(private managerService: ManagerService, private authService: AuthService) { }
+  constructor(public managerService: ManagerService, private authService: AuthService) { }
 
   ngOnInit() {
     this.fetchCats();

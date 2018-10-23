@@ -16,7 +16,7 @@ export class SignupComponent implements OnInit {
   existMessageState: boolean = true;
 
   constructor(private fb: FormBuilder,
-    private authService: AuthService) { }
+    public authService: AuthService) { }
 
   ngOnInit() {
     this.myForm = this.fb.group({
